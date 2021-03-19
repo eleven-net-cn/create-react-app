@@ -1,6 +1,21 @@
 {
   "package": {
-    "dependencies": {
+    "scripts": {
+      "start": "env-cmd -e development craco start",
+      "build": "yarn build-prod",
+      "build:analyze": "cross-env BUILD_ANALYZER=true yarn build-prod",
+      "build-test": "env-cmd -e test craco build",
+      "build-uat": "env-cmd -e uat craco build",
+      "build-prod": "env-cmd -e production craco build",
+      "commit": "git-cz",
+      "test": "craco test",
+      "release": "standard-version",
+      "release:patch": "standard-version --releaseAs patch",
+      "release:minor": "standard-version --releaseAs minor",
+      "release:major": "standard-version --releaseAs major",
+      "eject": "react-scripts eject"
+    },
+    "devDependencies": {
       "@testing-library/jest-dom": "^5.11.4",
       "@testing-library/react": "^11.1.0",
       "@testing-library/user-event": "^12.1.10",
@@ -9,10 +24,58 @@
       "@types/react-dom": "^17.0.0",
       "@types/jest": "^26.0.15",
       "typescript": "^4.1.2",
-      "web-vitals": "^1.0.1"
+      "web-vitals": "^1.0.1",
+      "@types/react-css-modules": "^4.6.2",
+      "env-cmd": "^10.1.0",
+      "generic-names": "^3.0.0",
+      "http-proxy-middleware": "^1.0.5",
+      "@babel/preset-env": "^7.11.5",
+      "@craco/craco": "^6.0.0",
+      "babel-plugin-import": "^1.13.0",
+      "babel-plugin-react-css-modules": "^5.2.6",
+      "circular-dependency-plugin": "^5.2.0",
+      "commitizen": "^4.2.1",
+      "craco-less": "^1.17.0",
+      "craco-plugin-scoped-css": "^1.1.0",
+      "cross-env": "^7.0.2",
+      "cz-conventional-changelog": "^3.3.0",
+      "postcss-less": "^3.1.4",
+      "postcss-scss": "^3.0.0",
+      "prettier": "^2.2.1",
+      "webpack-bundle-analyzer": "^3.9.0",
+      "@babel/plugin-proposal-class-properties": "^7.10.4",
+      "@babel/plugin-proposal-decorators": "^7.10.5",
+      "@commitlint/cli": "9.1.2",
+      "@commitlint/config-conventional": "9.1.2",
+      "husky": "^4.3.0",
+      "lint-staged": "^10.4.0",
+      "node-sass": "^4.14.1",
+      "standard-version": "^9.1.1",
+      "tsconfig-paths-webpack-plugin": "^3.3.0"
+    },
+    "dependencies": {
+      "@eleven.fe/reset.css": "^1.0.2",
+      "antd": "^4.6.4",
+      "axios": "^0.21.1",
+      "react-app-polyfill": "^1.0.6",
+      "react-scripts": "^4.0.2"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged",
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
     },
     "eslintConfig": {
       "extends": ["react-app", "react-app/jest"]
+    },
+    "lint-staged": {
+      "*.{js?(x),ts?(x),json,css,scss,less,html,md}": ["prettier --write"]
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
     }
   }
 }

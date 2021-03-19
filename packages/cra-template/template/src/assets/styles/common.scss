@@ -1,0 +1,23 @@
+html,
+body {
+  /* PC字体 */
+  font-family: 'PingFangSC-Regular', 'PingFang SC', 'Microsoft YaHei',
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* 鹅厂推荐的移动端字体设置最佳实践：https://github.com/AlloyTeam/Mars/blob/master/solutions/font-family.md */
+  /* font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif; */
+  /* 如果在移动端使用 REM 方案，推荐在 body 上重置 font-size 为 16px，避免页面加载时闪动。 */
+  /* font-size: 16px; */
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}

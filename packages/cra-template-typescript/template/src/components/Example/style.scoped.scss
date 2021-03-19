@@ -1,0 +1,31 @@
+.example-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 16px;
+  background-color: #282c34;
+  text-align: center;
+
+  img {
+    height: 40vmin;
+    pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+  }
+
+  p {
+    line-height: 2;
+    color: #61dafb;
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

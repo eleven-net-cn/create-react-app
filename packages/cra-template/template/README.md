@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+## 运行命令
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+yarn start              # 本地调试
+yarn build              # 打包 & 生产环境代码
+yarn build:analyze      # 打包生产环境代码 & 查看编译产物分析
 
-## Available Scripts
+yarn commit             # （推荐）交互式书写 commit message
 
-In the project directory, you can run:
+# 云效发布
+yarn build-test         # 打包 & 测试环境代码
+yarn build-uat          # 打包 & UAT 环境代码
+yarn build-prod         # 打包 & 生产环境代码
 
-### `npm start`
+yarn release            # 根据 commit 提交，自动升级 version、生成 CHANGELOG.md
+yarn release:patch      # 自动升级小版本号、生成 CHANGELOG.md
+yarn release:minor      # 自动升级次版本号、生成 CHANGELOG.md
+yarn release:major      # 自动升级主版本号、生成 CHANGELOG.md
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+yarn test               # 运行测试
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 推荐不要使用 eject，以便能够跟随 React 官方的脚步，随时在你的项目中升级 react-scripts
+# 所有的 react-scripts & webpack 自定义配置，都可以在 craco.config.js 中扩展
+# 如果使用了 eject，你需要自己处理 craco.config.js 中已经添加的各项扩展
+yarn eject
+```
 
-### `npm test`
+## 目录
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+├── build/
+├── public/
+│
+├── src
+│   ├── assets                      # 公用静态资源
+│   │     ├── images/                   # 公用图片
+│   │     └── styles/                   # 全局公用样式
+│   │
+│   ├── components/
+│   ├── constants/                  # 公用配置常量
+│   ├── pages/
+│   ├── services/                   # API
+│   ├── utils
+│   │     └── env.js                    # 编译环境区分
+│   │
+│   ├── App.init.js                 # 应用初始化配置（Sentry、APM 等）
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+│   ├── serviceWorker.js
+│   ├── setupProxy.js               # 本地开发代理
+│   └── setupTests.js
+│
+├── .commitlintrc.js            # commitlint 配置
+├── .env-cmdrc.js               # node 运行环境配置 & react-scripts 编译配置
+├── .prettierrc
+├── .gitignore
+├── antd.theme.js               # 自定义 antd theme
+├── craco.config.js             # craco 覆盖 react-scripts & webpack 配置
+├── package.json
+├── README.md
+└── yarn.lock
+```
