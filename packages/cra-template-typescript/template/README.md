@@ -44,7 +44,6 @@ yarn eject
 │   ├── utils
 │   │     └── env.ts                    # 编译环境区分
 │   │
-│   ├── App.init.ts                 # 应用初始化配置（Sentry、APM 等）
 │   ├── App.test.tsx
 │   ├── App.tsx
 │   ├── index.tsx

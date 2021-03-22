@@ -43,7 +43,6 @@ yarn eject
 │   ├── utils
 │   │     └── env.js                    # 编译环境区分
 │   │
-│   ├── App.init.js                 # 应用初始化配置（Sentry、APM 等）
 │   ├── App.js
 │   ├── App.test.js
 │   ├── index.js
