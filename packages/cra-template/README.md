@@ -1,5 +1,7 @@
 # @eleven.fe/cra-template
 
+按照 CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义的 cra-template，这是 ES 版本。工具会长期维护，逐渐加入更多的扩展，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
+
 运行命令，一键生成 React 项目
 
 ```sh
