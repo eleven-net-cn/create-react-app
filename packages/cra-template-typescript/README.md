@@ -8,7 +8,7 @@ CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/do
 
 GitHub：https://github.com/eleven-net-cn/create-react-app
 
-## 一键使用
+## 立即使用
 
 运行命令，一键生成 React 项目：
 
