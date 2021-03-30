@@ -1,14 +1,14 @@
 # @eleven.fe/cra-template
 
-CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义 cra-template-typescript。
+CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义 cra-template。
 
 支持通过 [craco](https://github.com/gsoft-inc/craco) 扩展 CRA/webpack 配置，提供无 `eject` 使用 CRA 的便捷方式，同时你可以自由升级 `react-scripts`，内置一系列日常代码开发必备的编译扩展、代码规范性扩展以及 AntD 按需加载配置等。
 
 工具长期维护，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
 
-**GitHub**：https://github.com/eleven-net-cn/create-react-app
+GitHub：https://github.com/eleven-net-cn/create-react-app
 
-## 一键使用
+## 立即使用
 
 运行命令，一键生成 React 项目：
 
