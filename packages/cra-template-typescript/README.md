@@ -1,8 +1,16 @@
 # @eleven.fe/cra-template-typescript
 
-按照 CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义的 cra-template，这是 TypeScript 版本。工具会长期维护，逐渐加入更多的扩展，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
+CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义 cra-template-typescript。
 
-运行命令，一键生成 React 项目
+支持通过 [craco](https://github.com/gsoft-inc/craco) 扩展 CRA/webpack 配置，提供无 `eject` 使用 CRA 的便捷方式，同时你可以自由升级 `react-scripts`，内置一系列日常代码开发必备的编译扩展、代码规范性扩展以及 AntD 按需加载配置等。
+
+工具长期维护，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
+
+**GitHub**：https://github.com/eleven-net-cn/create-react-app
+
+## 一键使用
+
+运行命令，一键生成 React 项目：
 
 ```sh
 npx create-react-app my-app --template @eleven.fe/cra-template-typescript
@@ -32,8 +40,8 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 - 编译扩展
 
-  - ✅ 引入 emv-cmd，可区分任意（编译）环境，优于 dotEnv
-  - ✅ 引入 craco，无需 eject，支持覆盖所有 webpack 配置
+  - ✅ 引入 [emv-cmd](https://www.npmjs.com/package/env-cmd)，可区分任意（编译）环境，优于 dotEnv
+  - ✅ 引入 [craco](https://github.com/gsoft-inc/craco)，无需 eject，支持覆盖所有 webpack 配置
   - ✅ 内置别名 `@`，映射指向 src 目录
   - ✅ 支持本地开发热更新
   - ✅ 支持装饰器

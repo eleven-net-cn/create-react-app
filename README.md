@@ -42,4 +42,4 @@ CRA 是很棒的工具，开发 React 应用你必然有使用过、或正在使
 
 扩展了日常开发 React 应用比较常用的特性，诸如编译环境区分 test/uat/production、css modules 等问题，给出了更友好的办法，并且，将 craco 定制集成进去，你既可以跟随 CRA 官方的脚步去升级 react-scripts 版本，也可以自由增加更多的扩展特性，具体请阅读 template 的 README 说明。
 
-两款工具会长期维护，逐渐加入更多的扩展，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
+工具长期维护，逐渐加入更多的扩展，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
