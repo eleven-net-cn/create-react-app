@@ -22,6 +22,11 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 > `npx` 和 `yarn create` 二选一即可，两者生成的项目完全一致，都会默认使用 yarn 作为项目的包管理工具。
 
+## TODO
+
+1. 内置增强的 eslint 扩展
+2. 支持预渲染
+
 ## 扩展支持
 
 - 统一的应用开发基础配置
