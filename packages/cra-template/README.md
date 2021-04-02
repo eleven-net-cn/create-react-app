@@ -6,7 +6,7 @@ CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/do
 
 工具长期维护，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
 
-GitHub：https://github.com/eleven-net-cn/create-react-app
+GitHub：https://github.com/eleven-net-cn/create-react-app ☞ packages/cra-template
 
 ## 立即使用
 
