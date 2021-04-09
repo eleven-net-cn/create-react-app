@@ -20,6 +20,8 @@ npx create-react-app my-app --template @eleven.fe/cra-template
 yarn create react-app my-app --template @eleven.fe/cra-template
 ```
 
+![create_react_app.gif](http://assets.eleven.net.cn/images/create_react_app.gif)
+
 > `npx` 和 `yarn create` 二选一即可，两者生成的项目完全一致，都会默认使用 yarn 作为项目的包管理工具。
 
 ## 扩展支持
