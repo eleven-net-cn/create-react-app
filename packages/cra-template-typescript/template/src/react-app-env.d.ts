@@ -8,4 +8,4 @@ declare type BuildEnv = 'development' | 'test' | 'uat' | 'production';
 /**
  * 多编译环境变量约束
  */
-declare type MultiEnv<T = string> = { [K in BuildEnv]: T };
+declare type MultiEnv<T = string> = Record<BuildEnv, T>;

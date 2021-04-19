@@ -47,7 +47,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 - 编译扩展
 
-  - ✅ 引入 [emv-cmd](https://www.npmjs.com/package/env-cmd)，可区分任意（编译）环境，优于 dotEnv
+  - ✅ 引入 [env-cmd](https://www.npmjs.com/package/env-cmd)，可区分任意（编译）环境，优于 dotEnv
   - ✅ 引入 [craco](https://github.com/gsoft-inc/craco)，无需 eject，支持覆盖所有 webpack 配置
   - ✅ 内置别名 `@`，映射指向 src 目录
   - ✅ 支持本地开发热更新
