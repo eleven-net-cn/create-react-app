@@ -217,7 +217,9 @@ module.exports = {
            * （意味着你不再需要额外增加 webpack alias）
            *  - https://github.com/dividab/tsconfig-paths-webpack-plugin
            */
-          new TsconfigPathsPlugin(),
+          new TsconfigPathsPlugin({
+            extensions: ['.ts', '.tsx', '.js', '.jsx'],
+          }),
         ],
       ];
 
