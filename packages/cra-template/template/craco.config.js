@@ -125,6 +125,22 @@ module.exports = {
           handleMissingStyleName: 'warn',
         },
       ],
+      /**
+       * https://github.com/tleunen/babel-plugin-module-resolver
+       *
+       * 解决 babel-plugin-react-css-modules 不兼容 webpack alias 问题
+       *
+       * Support for Webpack resolve aliases
+       *  https://github.com/gajus/babel-plugin-react-css-modules/issues/46
+       */
+      [
+        'module-resolver',
+        {
+          alias: {
+            '@': path.resolve(__dirname, 'src'),
+          },
+        },
+      ],
     ],
   },
   style: {
