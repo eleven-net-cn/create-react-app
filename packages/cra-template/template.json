@@ -26,6 +26,7 @@
       "@babel/preset-env": "^7.11.5",
       "@craco/craco": "^6.0.0",
       "babel-plugin-import": "^1.13.0",
+      "babel-plugin-module-resolver": "^4.1.0",
       "babel-plugin-react-css-modules": "^5.2.6",
       "circular-dependency-plugin": "^5.2.0",
       "commitizen": "^4.2.1",
@@ -43,8 +44,9 @@
       "@commitlint/config-conventional": "9.1.2",
       "husky": "^4.3.0",
       "lint-staged": "^10.4.0",
-      "node-sass": "^4.14.1",
-      "standard-version": "^9.1.1"
+      "node-sass": "^5.0.0",
+      "standard-version": "^9.1.1",
+      "vconsole-webpack-plugin": "^1.5.2"
     },
     "dependencies": {
       "@eleven.fe/reset.css": "^1.0.2",

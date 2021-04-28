@@ -56,6 +56,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
   - ✅ 支持 [react css modules](https://github.com/gajus/babel-plugin-react-css-modules)（sass/less/css），☞ 使用指南见下方
   - ✅ 支持 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)（仅支持 sass/css），☞ 使用指南见下方
   - ✅ 内置模块间循环依赖检测
+  - ✅ 内置 vconsole-webpack-plugin ，默认在非生产环境开启，在生产环境会被移除，vconsole 代码也不会被打包
   - ✅ tsconfig.json 扩展 paths
 
 - 开发框架支持

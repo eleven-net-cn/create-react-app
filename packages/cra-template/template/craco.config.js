@@ -24,6 +24,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CracoLessPlugin = require('craco-less');
 const CracoScopedCssPlugin = require('craco-plugin-scoped-css');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const vConsolePlugin = require('vconsole-webpack-plugin');
 const genericNames = require('generic-names');
 const antdTheme = require('./antd.theme');
 
@@ -35,6 +36,7 @@ const isBuildAnalyzer = process.env.BUILD_ANALYZER === 'true';
 const removeFilenameHash = process.env.REMOVE_FILENAME_HASH === 'true';
 const shouldDropDebugger = process.env.SHOULD_DROP_DEBUGGER === 'true';
 const shouldDropConsole = process.env.SHOULD_DROP_CONSOLE === 'true';
+const enableVConsole = process.env.ENABLE_VCONSOLE === 'true';
 const localIdentName = '[local]-[hash:base64:5]';
 
 module.exports = {
@@ -169,6 +171,22 @@ module.exports = {
        *  - https://www.npmjs.com/package/webpack-bundle-analyzer
        */
       ...when(isBuildAnalyzer, () => [new BundleAnalyzerPlugin()], []),
+      /**
+       * vconsole-webpack-plugin
+       *  - 生产环境，强制不会生效
+       *
+       * 必须 entry 为数组插件才能生效，如果不是需自己改写
+       * https://github.com/diamont1001/vconsole-webpack-plugin/issues/44
+       */
+      ...when(
+        !isBuildProd,
+        () => [
+          new vConsolePlugin({
+            enable: !isBuildProd && enableVConsole,
+          }),
+        ],
+        []
+      ),
     ],
     /**
      * 重写 webpack 任意配置
@@ -176,6 +194,14 @@ module.exports = {
      *  - 这里选择配置为函数，与直接定义 configure 对象方式互斥；
      */
     configure: (webpackConfig, { env, paths }) => {
+      /**
+       * 改写 entry 为数组，确保 vconsole-webpack-plugin 可以生效
+       * https://github.com/diamont1001/vconsole-webpack-plugin/issues/44
+       */
+      if (isProd && typeof webpackConfig.entry === 'string') {
+        webpackConfig.entry = [webpackConfig.entry];
+      }
+
       /**
        * 修改 output
        */
