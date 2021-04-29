@@ -1,8 +1,8 @@
 /**
- * craco 重写 CRA 配置
+ * Craco 重写 CRA 配置
  *  - GitHub：https://github.com/gsoft-inc/craco
  *  - 配置参数：https://github.com/gsoft-inc/craco/blob/master/packages/craco/README.md#configuration-overview
- *  - 快速指南：https://juejin.im/post/6871148364919111688
+ *  - 快速指南：https://blog.eleven.net.cn/2020/09/11/cra/craco/
  *
  * Tips：
  *  1、区分 node 运行环境 —— NODE_ENV
