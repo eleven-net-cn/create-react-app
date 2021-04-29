@@ -14,6 +14,7 @@ module.exports = {
   development: {
     REACT_APP_BUILD_ENV: 'development', // 编译环境
     PUBLIC_URL: '', // 配置静态资源 url,最终影响 output下的 publicPath（开发环境不需要配置）
+    BUILD_PATH: 'build',  // 自定义打包输出目录
     DANGEROUSLY_DISABLE_HOST_CHECK: true, // 允许代理 host 通过 IP 地址访问
     // HOST: 'local.test.xxxx.com', // 指定启动时的 host（需提前修改 host 映射）
     ENABLE_VCONSOLE: true, // 是否开启 vconsole（ production 环境即使设置为 true 也不会开启）
@@ -21,6 +22,7 @@ module.exports = {
   test: {
     REACT_APP_BUILD_ENV: 'test',
     PUBLIC_URL: ``,
+    BUILD_PATH: 'build',
     INLINE_RUNTIME_CHUNK: false,
     GENERATE_SOURCEMAP: true,
     REMOVE_FILENAME_HASH: false, // 是否移除编译产物中 js/css 文件名的 hash 值
@@ -29,6 +31,7 @@ module.exports = {
   uat: {
     REACT_APP_BUILD_ENV: 'uat',
     PUBLIC_URL: ``,
+    BUILD_PATH: 'build',
     INLINE_RUNTIME_CHUNK: false,
     GENERATE_SOURCEMAP: true,
     REMOVE_FILENAME_HASH: false,
@@ -37,7 +40,7 @@ module.exports = {
   production: {
     REACT_APP_BUILD_ENV: 'production',
     PUBLIC_URL: ``,
-    // BUILD_PATH: 'dist',  // 自定义打包输出目录
+    BUILD_PATH: 'build',
     INLINE_RUNTIME_CHUNK: false, // runtime 代码是否内嵌到 html 中
     GENERATE_SOURCEMAP: true, // 是否开启 sourcemap
     REMOVE_FILENAME_HASH: false,
