@@ -23,6 +23,7 @@ const { whenDev, whenProd, when } = require('@craco/craco');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CracoLessPlugin = require('craco-less');
 const CracoScopedCssPlugin = require('craco-plugin-scoped-css');
+const CracoScopedLessPlugin = require('craco-scoped-less');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const vConsolePlugin = require('vconsole-webpack-plugin');
@@ -384,6 +385,13 @@ module.exports = {
      */
     {
       plugin: CracoScopedCssPlugin,
+    },
+    /**
+     * react scoped css, support less
+     *  - https://github.com/villaincoder/craco-scoped-less
+     */
+    {
+      plugin: CracoScopedLessPlugin,
     },
   ],
 };

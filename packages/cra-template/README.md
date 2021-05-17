@@ -2,7 +2,7 @@
 
 CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义 cra-template。
 
-支持通过 [craco](https://github.com/gsoft-inc/craco) 扩展 CRA/webpack 配置，提供无 `eject` 使用 CRA 的便捷方式，同时你可以自由升级 `react-scripts`，内置一系列日常代码开发必备的编译扩展、代码规范性扩展以及 AntD 按需加载配置等。
+内置 [craco](https://github.com/gsoft-inc/craco) 扩展 CRA/webpack 配置，提供无 `eject` 使用 CRA 的便捷方式。默认支持一系列日常代码开发必备的编译扩展、代码规范性扩展以及 AntD 按需加载配置等，可以自由升级 `react-scripts`。
 
 工具长期维护，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
 
@@ -49,7 +49,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template
   - ✅ 支持装饰器
   - ✅ 支持 less
   - ✅ 支持 [react css modules](https://github.com/gajus/babel-plugin-react-css-modules)（sass/less/css），☞ 使用指南见下方
-  - ✅ 支持 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)（仅支持 sass/css），☞ 使用指南见下方
+  - ✅ 支持 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)（sass/less/css），☞ 使用指南见下方
   - ✅ 内置模块间循环依赖检测
   - ✅ 内置 [vconsole-webpack-plugin](https://github.com/diamont1001/vconsole-webpack-plugin)，默认在非生产环境开启，在生产环境会被移除，vconsole 代码也不会被打包
 

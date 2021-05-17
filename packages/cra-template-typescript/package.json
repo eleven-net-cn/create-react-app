@@ -1,6 +1,6 @@
 {
   "name": "@eleven.fe/cra-template-typescript",
-  "version": "1.1.27",
+  "version": "1.1.28",
   "keywords": [
     "react",
     "create-react-app",
@@ -43,7 +43,8 @@
     "circular-dependency-plugin": "^5.2.0",
     "commitizen": "^4.2.1",
     "craco-less": "^1.17.0",
-    "craco-plugin-scoped-css": "^1.1.0",
+    "craco-plugin-scoped-css": "^1.1.1",
+    "craco-scoped-less": "^1.0.3",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "env-cmd": "^10.1.0",
