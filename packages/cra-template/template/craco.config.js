@@ -58,6 +58,15 @@ module.exports = {
         /node_modules[\\/]react-app-polyfill/,
       ],
     },
+    assumptions: {
+      /**
+       * https://babeljs.io/docs/en/assumptions#setpublicclassfields
+       * 
+       * 装饰器的 legancy: true，依赖此配置
+       *  - https://babeljs.io/docs/en/babel-plugin-proposal-decorators#legacy
+       */
+      setPublicClassFields: true,
+    },
     presets: [
       [
         '@babel/preset-env',
@@ -90,15 +99,10 @@ module.exports = {
         // @babel/plugin-proposal-decorators 需要在 @babel/plugin-proposal-class-properties 之前，保证装饰器先处理
         '@babel/plugin-proposal-decorators',
         {
-          legacy: true, // 推荐
+          legacy: true, // Use the legacy (stage 1) decorators syntax and behavior.
         },
       ],
-      [
-        '@babel/plugin-proposal-class-properties',
-        {
-          loose: true, // babel 编译时，对 class 的属性采用赋值表达式，而不是 Object.defineProperty（更简洁）
-        },
-      ],
+      ['@babel/plugin-proposal-class-properties'],
       /**
        * babel-plugin-react-css-modules
        *  - GitHub: https://github.com/gajus/babel-plugin-react-css-modules
