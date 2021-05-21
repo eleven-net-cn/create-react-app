@@ -41,21 +41,21 @@ yarn eject
 │   ├── pages/
 │   ├── services/                   # API
 │   ├── utils
-│   │     └── env.js                    # 编译环境区分
+│   │     └── env.js                    # 编译环境相关封装
 │   │
 │   ├── App.js
 │   ├── App.test.js
 │   ├── index.js
-│   ├── serviceWorker.js
+│   ├── reportWebVitals.js
 │   ├── setupProxy.js               # 本地开发代理
 │   └── setupTests.js
 │
 ├── .commitlintrc.js            # commitlint 配置
 ├── .env-cmdrc.js               # node 运行环境配置 & react-scripts 编译配置
-├── .prettierrc
 ├── .gitignore
+├── .prettierrc
 ├── antd.theme.js               # 自定义 antd theme
-├── craco.config.js             # craco 覆盖 react-scripts & webpack 配置
+├── craco.config.js             # craco 配置，覆盖 react-scripts & webpack 配置
 ├── package.json
 ├── README.md
 └── yarn.lock
