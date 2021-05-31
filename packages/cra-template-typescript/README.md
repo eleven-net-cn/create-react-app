@@ -34,6 +34,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 - 代码规范性扩展
 
+  - ✅ 增强 eslint，扩展自 umijs
   - ✅ git 提交时，lint-staged 按照指定的 prettier 规则格式化代码
   - ✅ git 提交时，commitlint 校验 commit message
   - ✅ 提供 `yarn commit` 命令，交互式输入 commit message
