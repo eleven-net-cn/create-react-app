@@ -26,6 +26,7 @@
       "typescript": "^4.1.2",
       "web-vitals": "^1.0.1",
       "@types/react-css-modules": "^4.6.2",
+      "@umijs/fabric": "^2.5.13",
       "env-cmd": "^10.1.0",
       "generic-names": "^3.0.0",
       "http-proxy-middleware": "^1.0.5",

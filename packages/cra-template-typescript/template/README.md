@@ -54,6 +54,7 @@ yarn eject
 │
 ├── .commitlintrc.js            # commitlint 配置
 ├── .env-cmdrc.js               # node 运行环境配置 & react-scripts 编译配置
+├── .eslintrc.js                # 增强的 eslint 规则（覆盖 package.josn 中的 eslintConfig）
 ├── .gitignore
 ├── .prettierrc
 ├── antd.theme.js               # 自定义 antd theme
