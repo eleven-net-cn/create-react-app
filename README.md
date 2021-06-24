@@ -35,11 +35,11 @@ CRA 是很棒的工具，开发 React 应用你必然有使用过、或正在使
 
 ## 推荐
 
-这里提供两款直接可用的模版工具，你可以用来一键生成 React 应用：
+提供两款直接可用的模版工具，一键生成 React 应用：
 
 - TypeScript 版本：[@eleven.fe/cra-template-typescript](https://www.npmjs.com/package/@eleven.fe/cra-template-typescript)
 - ES 版本：[@eleven.fe/cra-template](https://www.npmjs.com/package/@eleven.fe/cra-template)
 
-扩展了日常开发 React 应用比较常用的特性，诸如编译环境区分 test/uat/production、css modules 等问题，给出了更友好的办法，并且，将 craco 定制集成进去，你既可以跟随 CRA 官方的脚步去升级 react-scripts 版本，也可以自由增加更多的扩展特性，具体请阅读 template 的 README 说明。
+内置 [craco](https://github.com/gsoft-inc/craco) 扩展 CRA/webpack 配置，提供无 `eject` 使用 CRA 的便捷方式。默认支持一系列日常代码开发必备的编译扩展、代码规范性扩展以及 AntD 按需加载配置等，可以自由升级 `react-scripts`。
 
-工具长期维护，逐渐加入更多的扩展，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
+工具长期维护，和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。

@@ -1,12 +1,6 @@
 # @eleven.fe/cra-template-typescript
 
-CRA 官方推荐方式 —— [Custom Templates](https://create-react-app.dev/docs/custom-templates)，自定义 cra-template-typescript。
-
-支持通过 [craco](https://github.com/gsoft-inc/craco) 扩展 CRA/webpack 配置，提供无 `eject` 使用 CRA 的便捷方式，同时你可以自由升级 `react-scripts`，内置一系列日常代码开发必备的编译扩展、代码规范性扩展以及 AntD 按需加载配置等。
-
-工具长期维护，并且和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
-
-GitHub：https://github.com/eleven-net-cn/create-react-app
+开箱即用的 CRA 定制方案，解锁无 `eject` 使用 create-react-app 的便捷方法，自由扩展任意配置，可持续升级 react-scripts。
 
 ## 立即使用
 
@@ -20,7 +14,14 @@ npx create-react-app my-app --template @eleven.fe/cra-template-typescript
 yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 ```
 
+![create_react_app_ts.gif](https://static.eleven.net.cn/images/react-app/create_react_app_ts.gif)
+
 > `npx` 和 `yarn create` 二选一即可，两者生成的项目完全一致，都会默认使用 yarn 作为项目的包管理工具。
+
+## TODO
+
+1. 内置增强的 eslint 扩展
+2. 支持预渲染
 
 ## 扩展支持
 
@@ -33,6 +34,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 - 代码规范性扩展
 
+  - ✅ 增强 eslint，扩展自 umijs
   - ✅ git 提交时，lint-staged 按照指定的 prettier 规则格式化代码
   - ✅ git 提交时，commitlint 校验 commit message
   - ✅ 提供 `yarn commit` 命令，交互式输入 commit message
@@ -40,15 +42,16 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 - 编译扩展
 
-  - ✅ 引入 [emv-cmd](https://www.npmjs.com/package/env-cmd)，可区分任意（编译）环境，优于 dotEnv
+  - ✅ 引入 [env-cmd](https://www.npmjs.com/package/env-cmd)，可区分任意（编译）环境，优于 dotEnv
   - ✅ 引入 [craco](https://github.com/gsoft-inc/craco)，无需 eject，支持覆盖所有 webpack 配置
   - ✅ 内置别名 `@`，映射指向 src 目录
   - ✅ 支持本地开发热更新
   - ✅ 支持装饰器
   - ✅ 支持 less
   - ✅ 支持 [react css modules](https://github.com/gajus/babel-plugin-react-css-modules)（sass/less/css），☞ 使用指南见下方
-  - ✅ 支持 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)（仅支持 sass/css），☞ 使用指南见下方
+  - ✅ 支持 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)（sass/less/css），☞ 使用指南见下方
   - ✅ 内置模块间循环依赖检测
+  - ✅ 内置 [vconsole-webpack-plugin](https://github.com/diamont1001/vconsole-webpack-plugin)，默认在非生产环境开启，在生产环境会被移除，vconsole 代码也不会被打包
   - ✅ tsconfig.json 扩展 paths
 
 - 开发框架支持
