@@ -52,7 +52,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
   - ✅ tsconfig.json 扩展 paths
 
 - 开发框架支持
-  - ✅ 内置 AntDesign 配置、按需加载，开箱即用，提供 `antd.theme.js` 配置自定义主题
+  - ✅ 内置 AntDesign 配置、按需加载，开箱即用，提供 `package.json/antdTheme` 配置自定义主题
 
 ## Q&A
 

@@ -78,6 +78,7 @@
       "commitizen": {
         "path": "./node_modules/cz-conventional-changelog"
       }
-    }
+    },
+    "antdTheme": {}
   }
 }

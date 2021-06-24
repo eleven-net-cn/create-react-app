@@ -25,7 +25,8 @@ const CracoLessPlugin = require('craco-less');
 const CracoScopedCssPlugin = require('craco-plugin-scoped-css');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const genericNames = require('generic-names');
-const antdTheme = require('./antd.theme');
+// antd 主题样式变量: https://ant.design/docs/react/customize-theme-cn#Ant-Design-%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%8F%98%E9%87%8F
+const { antdTheme } = require('./package.json');
 
 // 判断编译环境是否为生产
 const isBuildProd = process.env.REACT_APP_BUILD_ENV === 'production';
