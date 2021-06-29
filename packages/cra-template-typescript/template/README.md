@@ -54,9 +54,7 @@ yarn eject
 │
 ├── .commitlintrc.js            # commitlint 配置
 ├── .env-cmdrc.js               # node 运行环境配置 & react-scripts 编译配置
-├── .eslintrc.js                # 增强的 eslint 规则（覆盖 package.josn 中的 eslintConfig）
 ├── .gitignore
-├── .prettierrc
 ├── craco.config.js             # craco 配置，覆盖 react-scripts & webpack 配置
 ├── package.json
 ├── README.md
