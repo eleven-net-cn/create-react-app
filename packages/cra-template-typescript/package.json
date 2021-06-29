@@ -1,6 +1,6 @@
 {
   "name": "@eleven.fe/cra-template-typescript",
-  "version": "1.1.36",
+  "version": "1.1.37",
   "keywords": [
     "react",
     "create-react-app",
@@ -50,7 +50,6 @@
     "env-cmd": "^10.1.0",
     "generic-names": "^3.0.0",
     "http-proxy-middleware": "^1.0.5",
-    "husky": "^4.3.0",
     "lint-staged": "^11.0.0",
     "node-sass": "^5.0.0",
     "postcss-less": "^3.1.4",
@@ -59,7 +58,8 @@
     "standard-version": "^9.1.1",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "vconsole-webpack-plugin": "^1.5.2",
-    "webpack-bundle-analyzer": "^3.9.0"
+    "webpack-bundle-analyzer": "^3.9.0",
+    "yorkie": "^2.0.0"
   },
   "dependencies": {
     "@eleven.fe/reset.css": "^1.0.2",

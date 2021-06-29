@@ -49,12 +49,12 @@
       "@babel/plugin-proposal-decorators": "^7.10.5",
       "@commitlint/cli": "9.1.2",
       "@commitlint/config-conventional": "9.1.2",
-      "husky": "^4.3.0",
       "lint-staged": "^11.0.0",
       "node-sass": "^5.0.0",
       "standard-version": "^9.1.1",
       "tsconfig-paths-webpack-plugin": "^3.3.0",
-      "vconsole-webpack-plugin": "^1.5.2"
+      "vconsole-webpack-plugin": "^1.5.2",
+      "yorkie": "^2.0.0"
     },
     "dependencies": {
       "@eleven.fe/reset.css": "^1.0.2",
@@ -65,11 +65,9 @@
       "react-scripts": "^4.0.3",
       "regenerator-runtime": "^0.13.7"
     },
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged --allow-empty",
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-      }
+    "gitHooks": {
+      "pre-commit": "lint-staged --allow-empty",
+      "commit-msg": "commitlint -E GIT_PARAMS"
     },
     "eslintConfig": {
       "extends": [
@@ -103,9 +101,9 @@
     },
     "eslintIgnore": ["src/setupProxy.js"],
     "lint-staged": {
-      "**/*.{js?(x),json,css,scss,less,html,md}": ["prettier --write"],
-      "src/**/*.{ts?(x)}": ["prettier --parser=typescript --write"],
-      "src/**/*.{ts?(x),js?(x)}": ["eslint --fix"]
+      "**/*.{js,jsx,json,css,scss,less,html,md}": ["prettier --write"],
+      "src/**/*.{ts,tsx}": ["prettier --parser=typescript --write"],
+      "src/**/*.{ts,tsx,js,jsx}": ["eslint --fix"]
     },
     "prettier": {
       "arrowParens": "avoid",
