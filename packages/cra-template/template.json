@@ -37,14 +37,14 @@
       "cz-conventional-changelog": "^3.3.0",
       "postcss-less": "^3.1.4",
       "postcss-scss": "^3.0.0",
-      "prettier": "^2.2.1",
+      "prettier": "^2.3.2",
       "webpack-bundle-analyzer": "^3.9.0",
       "@babel/plugin-proposal-class-properties": "^7.10.4",
       "@babel/plugin-proposal-decorators": "^7.10.5",
       "@commitlint/cli": "9.1.2",
       "@commitlint/config-conventional": "9.1.2",
       "husky": "^4.3.0",
-      "lint-staged": "^10.4.0",
+      "lint-staged": "^11.0.0",
       "node-sass": "^5.0.0",
       "standard-version": "^9.1.1",
       "vconsole-webpack-plugin": "^1.5.2"
@@ -94,6 +94,7 @@
         "no-unused-expressions": 0
       }
     },
+    "eslintIgnore": ["src/setupProxy.js"],
     "lint-staged": {
       "**/*.{js?(x),json,css,scss,less,html,md}": ["prettier --write"],
       "src/**/*.{ts?(x)}": ["prettier --parser=typescript --write"],
