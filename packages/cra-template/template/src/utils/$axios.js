@@ -8,8 +8,8 @@ const config = {
 const $axios = axios.create(config);
 
 $axios.interceptors.request.use(
-  requestConfig => {
-    return requestConfig;
+  config => {
+    return config;
   },
   error => {
     return Promise.reject(error);

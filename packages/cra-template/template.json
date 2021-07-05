@@ -72,6 +72,7 @@
         "@typescript-eslint/consistent-type-definitions": 0,
         "@typescript-eslint/no-invalid-this": 0,
         "@typescript-eslint/consistent-type-imports": 0,
+        "@typescript-eslint/no-shadow": 0,
         "no-underscore-dangle": 0,
         "import/no-extraneous-dependencies": 0,
         "import/no-dynamic-require": 0,
