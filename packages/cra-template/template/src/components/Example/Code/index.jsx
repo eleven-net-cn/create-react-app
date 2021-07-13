@@ -1,4 +1,4 @@
-// eg: react css modules
+// eg: react css modules（暂不支持使用 @ 别名导入）
 import './style.module.scss';
 import React from 'react';
 

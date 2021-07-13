@@ -134,7 +134,7 @@ module.exports = {
           autoResolveMultipleImports: true,
           handleMissingStyleName: 'warn'
         }
-      ],
+      ]
       /**
        * https://github.com/tleunen/babel-plugin-module-resolver
        *
@@ -143,14 +143,14 @@ module.exports = {
        * Support for Webpack resolve aliases
        *  https://github.com/gajus/babel-plugin-react-css-modules/issues/46
        */
-      [
-        'module-resolver',
-        {
-          alias: {
-            '@': path.resolve(__dirname, 'src')
-          }
-        }
-      ]
+      // [
+      //   'module-resolver',
+      //   {
+      //     alias: {
+      //       '@': path.resolve(__dirname, 'src')
+      //     }
+      //   }
+      // ]
     ]
   },
   style: {

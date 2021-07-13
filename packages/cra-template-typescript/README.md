@@ -87,6 +87,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
    - index.tsx 文件
 
      ```tsx
+     // 暂不支持使用 @ 别名导入
      import './style.scoped.scss';
      import React from 'react';
 
@@ -129,6 +130,7 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
    - index.tsx 文件
 
      ```tsx
+     // 暂不支持使用 @ 别名导入
      import './style.module.scss';
      import React from 'react';
 

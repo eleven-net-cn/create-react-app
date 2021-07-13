@@ -2,7 +2,7 @@
  * 示例组件，编码时移除。
  */
 
-// eg: react scoped css
+// eg: react scoped css（暂不支持使用 @ 别名导入）
 import './style.scoped.scss';
 import React from 'react';
 import Code from './Code';
