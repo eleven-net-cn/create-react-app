@@ -21,6 +21,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { whenDev, whenProd, when } = require('@craco/craco');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const WebpackBar = require('webpackbar');
 const CracoLessPlugin = require('craco-less');
 const CracoScopedCssPlugin = require('craco-plugin-scoped-css');
 const CracoScopedLessPlugin = require('craco-scoped-less');
@@ -57,8 +58,8 @@ module.exports = {
        */
       exclude: [
         /node_modules[\\/]core-js/,
-        /node_modules[\\/]react-app-polyfill/,
-      ],
+        /node_modules[\\/]react-app-polyfill/
+      ]
     },
     assumptions: {
       /**
@@ -67,7 +68,7 @@ module.exports = {
        * 装饰器的 legancy: true，依赖此配置
        *  - https://babeljs.io/docs/en/babel-plugin-proposal-decorators#legacy
        */
-      setPublicClassFields: true,
+      setPublicClassFields: true
     },
     presets: [
       [
@@ -79,12 +80,12 @@ module.exports = {
           // https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md
           corejs: {
             version: 3, // 使用 core-js@3
-            proposals: true,
+            proposals: true
           },
           // Exclude transforms that make all code slower
-          exclude: ['transform-typeof-symbol'],
-        },
-      ],
+          exclude: ['transform-typeof-symbol']
+        }
+      ]
     ],
     plugins: [
       /**
@@ -95,16 +96,16 @@ module.exports = {
         {
           libraryName: 'antd',
           libraryDirectory: 'es',
-          style: true,
+          style: true
         },
-        'antd',
+        'antd'
       ],
       [
         // @babel/plugin-proposal-decorators 需要在 @babel/plugin-proposal-class-properties 之前，保证装饰器先处理
         '@babel/plugin-proposal-decorators',
         {
-          legacy: true, // Use the legacy (stage 1) decorators syntax and behavior.
-        },
+          legacy: true // Use the legacy (stage 1) decorators syntax and behavior.
+        }
       ],
       ['@babel/plugin-proposal-class-properties'],
       /**
@@ -119,11 +120,11 @@ module.exports = {
           exclude: 'node_modules',
           filetypes: {
             '.scss': {
-              syntax: 'postcss-scss',
+              syntax: 'postcss-scss'
             },
             '.less': {
-              syntax: 'postcss-less',
-            },
+              syntax: 'postcss-less'
+            }
           },
           // 必须保持和 css-modules 的 localIdentName 一致的命名
           // https://github.com/gajus/babel-plugin-react-css-modules/issues/291
@@ -131,8 +132,8 @@ module.exports = {
           generateScopedName: genericNames(localIdentName),
           webpackHotModuleReloading: true,
           autoResolveMultipleImports: true,
-          handleMissingStyleName: 'warn',
-        },
+          handleMissingStyleName: 'warn'
+        }
       ],
       /**
        * https://github.com/tleunen/babel-plugin-module-resolver
@@ -146,11 +147,11 @@ module.exports = {
         'module-resolver',
         {
           alias: {
-            '@': path.resolve(__dirname, 'src'),
-          },
-        },
-      ],
-    ],
+            '@': path.resolve(__dirname, 'src')
+          }
+        }
+      ]
+    ]
   },
   style: {
     /**
@@ -158,8 +159,8 @@ module.exports = {
      */
     modules: {
       // 必须保持和 babel-plugin-react-css-modules 一致的命名
-      localIdentName,
-    },
+      localIdentName
+    }
   },
   /**
    * 扩展 webpack 相关配置
@@ -169,6 +170,10 @@ module.exports = {
      * 新增 webpack plugin
      */
     plugins: [
+      /**
+       * https://www.npmjs.com/package/webpackbar
+       */
+      new WebpackBar(),
       /**
        * 模块间循环依赖检测插件
        *  - https://juejin.im/post/6844904017848434702
@@ -180,8 +185,8 @@ module.exports = {
             include: /src/,
             failOnError: true,
             allowAsyncCycles: false,
-            cwd: process.cwd(),
-          }),
+            cwd: process.cwd()
+          })
         ],
         []
       ),
@@ -201,11 +206,11 @@ module.exports = {
         !isBuildProd,
         () => [
           new vConsolePlugin({
-            enable: !isBuildProd && enableVConsole,
-          }),
+            enable: !isBuildProd && enableVConsole
+          })
         ],
         []
-      ),
+      )
     ],
     /**
      * 重写 webpack 任意配置
@@ -230,7 +235,7 @@ module.exports = {
           isProd,
           () => ({
             // 命名上移除 chunk 字样
-            chunkFilename: 'static/js/[name].[contenthash:8].js',
+            chunkFilename: 'static/js/[name].[contenthash:8].js'
           }),
           {}
         ),
@@ -239,10 +244,10 @@ module.exports = {
           isProd && removeFilenameHash,
           () => ({
             filename: 'static/js/[name].js',
-            chunkFilename: 'static/js/[name].js',
+            chunkFilename: 'static/js/[name].js'
           }),
           {}
-        ),
+        )
       };
 
       /**
@@ -256,7 +261,7 @@ module.exports = {
        */
       webpackConfig.resolve.extensions = [
         ...webpackConfig.resolve.extensions,
-        ...['.scss', '.less'],
+        ...['.scss', '.less']
       ];
 
       webpackConfig.resolve.plugins = [
@@ -268,9 +273,9 @@ module.exports = {
            *  - https://github.com/dividab/tsconfig-paths-webpack-plugin
            */
           new TsconfigPathsPlugin({
-            extensions: ['.ts', '.tsx', '.js', '.jsx'],
-          }),
-        ],
+            extensions: ['.ts', '.tsx', '.js', '.jsx']
+          })
+        ]
       ];
 
       webpackConfig.optimization.minimizer.map(plugin => {
@@ -280,7 +285,7 @@ module.exports = {
         if (plugin instanceof TerserPlugin) {
           Object.assign(plugin.options.terserOptions.compress, {
             drop_debugger: shouldDropDebugger, // 删除 debugger
-            drop_console: shouldDropConsole, // 删除 console
+            drop_console: shouldDropConsole // 删除 console
           });
         }
 
@@ -294,8 +299,8 @@ module.exports = {
         ...webpackConfig.optimization.splitChunks,
         ...{
           chunks: 'all',
-          name: true,
-        },
+          name: true
+        }
       };
 
       /**
@@ -311,13 +316,13 @@ module.exports = {
               plugin.options,
               {
                 // 命名上移除 chunk 字样
-                chunkFilename: 'static/css/[name].[contenthash:8].css',
+                chunkFilename: 'static/css/[name].[contenthash:8].css'
               },
               when(
                 removeFilenameHash,
                 () => ({
                   filename: 'static/css/[name].css',
-                  chunkFilename: 'static/css/[name].css',
+                  chunkFilename: 'static/css/[name].css'
                 }),
                 {}
               )
@@ -330,7 +335,7 @@ module.exports = {
 
       // 返回重写后的新配置
       return webpackConfig;
-    },
+    }
   },
   /**
    * 新增 craco 提供的 plugin
@@ -349,18 +354,18 @@ module.exports = {
             ...lessRule,
             ...{
               test: /\.less$/,
-              exclude: /\.module\.less$/,
-            },
+              exclude: /\.module\.less$/
+            }
           };
         },
         lessLoaderOptions: {
           lessOptions: {
             // 自定义 antd 主题
             modifyVars: antdTheme,
-            javascriptEnabled: true,
-          },
-        },
-      },
+            javascriptEnabled: true
+          }
+        }
+      }
     },
     /**
      * 支持 less module
@@ -374,31 +379,31 @@ module.exports = {
             ...lessRule,
             ...{
               test: /\.module\.less$/,
-              exclude: undefined,
-            },
+              exclude: undefined
+            }
           };
         },
         cssLoaderOptions: {
           modules: {
             // 必须保持和 babel-plugin-react-css-modules 一致的命名
-            localIdentName,
-          },
-        },
-      },
+            localIdentName
+          }
+        }
+      }
     },
     /**
      * react scoped css (only scss/css)
      *  - https://github.com/gaoxiaoliangz/react-scoped-css
      */
     {
-      plugin: CracoScopedCssPlugin,
+      plugin: CracoScopedCssPlugin
     },
     /**
      * react scoped css, support less
      *  - https://github.com/villaincoder/craco-scoped-less
      */
     {
-      plugin: CracoScopedLessPlugin,
-    },
-  ],
+      plugin: CracoScopedLessPlugin
+    }
+  ]
 };
