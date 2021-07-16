@@ -5,6 +5,10 @@ yarn start              # 本地调试
 yarn build              # 打包 & 生产环境代码
 yarn build:analyze      # 打包生产环境代码 & 查看编译产物分析
 
+yarn build-test         # 打包 & 测试环境代码
+yarn build-uat          # 打包 & UAT 环境代码
+yarn build-prod         # 打包 & 生产环境代码
+
 yarn commit             # （推荐）交互式书写 commit message
 yarn changelog          # （推荐）根据 commit message，自动升级 version、生成 CHANGELOG.md
 # 更多命令
@@ -14,11 +18,6 @@ yarn changelog          # （推荐）根据 commit message，自动升级 versi
 # yarn changelog -- -r major          # 指定本次仅升级 major 版本
 # yarn changelog -- -p alpha          # 指定本次升级 alpha 版本
 # yarn changelog -- -p beta           # 指定本次升级 beta 版本
-
-# 云效发布
-yarn build-test         # 打包 & 测试环境代码
-yarn build-uat          # 打包 & UAT 环境代码
-yarn build-prod         # 打包 & 生产环境代码
 
 yarn test               # 运行测试
 
