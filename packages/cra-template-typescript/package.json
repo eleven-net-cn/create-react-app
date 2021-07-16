@@ -70,5 +70,6 @@
     "react-app-polyfill": "^2.0.0",
     "react-scripts": "^4.0.3",
     "regenerator-runtime": "^0.13.7"
-  }
+  },
+  "gitHead": "5d20a165b816f5cd01b003bf9d6b6e0982074789"
 }

@@ -25,7 +25,8 @@
         "packages/react-error-overlay/**",
         "packages/react-scripts/**"
       ],
-      "message": "chore: publish"
+      "message": "chore: publish",
+      "registry": "https://registry.npmjs.org/"
     }
   },
   "changelog": {
