@@ -41,3 +41,23 @@ CRA 是很棒的工具，开发 React 应用你必然有使用过、或正在使
 - ES 版本：[@eleven.fe/cra-template](https://www.npmjs.com/package/@eleven.fe/cra-template)
 
 工具长期维护，和 [facebook/create-react-app](https://github.com/facebook/create-react-app) 保持更新同步。
+
+## CRA Template 开发/测试
+
+```zsh
+# ts
+npx create-react-app my-app-ts --template file:./create-react-app_xmly-custom/packages/cra-template-typescript
+
+# es
+npx create-react-app my-app-es --template file:./create-react-app_xmly-custom/packages/cra-template
+```
+
+## CRA Template 发布
+
+```zsh
+# 推荐始终通过命令提交，方便自动生成 CHANGELOG.md
+yarn commit
+
+# 一键自动发布
+yarn pub
+```

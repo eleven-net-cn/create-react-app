@@ -10,20 +10,26 @@
     "e2e": "tasks/e2e-simple.sh",
     "e2e:docker": "tasks/local-test.sh",
     "postinstall": "cd packages/react-error-overlay/ && yarn build:prod",
-    "publish": "tasks/publish.sh",
     "start": "cd packages/react-scripts && node bin/react-scripts.js start",
     "screencast": "node ./tasks/screencast.js",
     "screencast:error": "svg-term --cast jyu19xGl88FQ3poMY8Hbmfw8y --out screencast-error.svg --window --at 12000 --no-cursor",
     "alex": "alex .",
     "test": "cd packages/react-scripts && node bin/react-scripts.js test",
     "format": "prettier --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
-    "compile:lockfile": "node tasks/compile-lockfile.js"
+    "compile:lockfile": "node tasks/compile-lockfile.js",
+    "commit": "git-cz",
+    "pub": "lerna publish"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-lerna-scopes": "^12.1.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "alex": "^8.2.0",
+    "commitizen": "^4.2.4",
+    "commitlint": "^12.1.4",
+    "cz-lerna-changelog": "^2.0.3",
     "eslint": "^7.11.0",
     "execa": "1.0.0",
     "fs-extra": "^9.0.1",
@@ -46,12 +52,24 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.{js,json,yml,yaml,css,scss,ts,tsx,md}": [
       "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-lerna-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
     ]
   }
 }

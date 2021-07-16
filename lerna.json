@@ -3,6 +3,31 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "includeMergedTags": true,
+      "conventionalCommits": true,
+      "noPrivate": true
+    },
+    "publish": {
+      "ignoreChanges": [
+        "docusaurus/**",
+        "tasks/**",
+        "test/**",
+        "packages/babel-plugin-named-asset-import/**",
+        "packages/babel-preset-react-app/**",
+        "packages/confusing-browser-globals/**",
+        "packages/create-react-app/**",
+        "packages/eslint-config-react-app/**",
+        "packages/react-app-polyfill/**",
+        "packages/react-dev-utils/**",
+        "packages/react-error-overlay/**",
+        "packages/react-scripts/**"
+      ],
+      "message": "chore: publish"
+    }
+  },
   "changelog": {
     "repo": "facebook/create-react-app",
     "labels": {

@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "babel-plugin-named-asset-import",
   "version": "0.3.7",
   "description": "Babel plugin for named asset imports in Create React App",
