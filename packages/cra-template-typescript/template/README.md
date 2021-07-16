@@ -6,16 +6,19 @@ yarn build              # 打包 & 生产环境代码
 yarn build:analyze      # 打包生产环境代码 & 查看编译产物分析
 
 yarn commit             # （推荐）交互式书写 commit message
+yarn changelog          # （推荐）根据 commit message，自动升级 version、生成 CHANGELOG.md
+# 更多命令
+# yarn changelog -- -f                # 初次创建项目，执行命令生成 CHANGELOG.md
+# yarn changelog -- -r patch          # 指定本次仅升级 patch 版本
+# yarn changelog -- -r minor          # 指定本次仅升级 minor 版本
+# yarn changelog -- -r major          # 指定本次仅升级 major 版本
+# yarn changelog -- -p alpha          # 指定本次升级 alpha 版本
+# yarn changelog -- -p beta           # 指定本次升级 beta 版本
 
 # 云效发布
 yarn build-test         # 打包 & 测试环境代码
 yarn build-uat          # 打包 & UAT 环境代码
 yarn build-prod         # 打包 & 生产环境代码
-
-yarn release            # 根据 commit 提交，自动升级 version、生成 CHANGELOG.md
-yarn release:patch      # 自动升级小版本号、生成 CHANGELOG.md
-yarn release:minor      # 自动升级次版本号、生成 CHANGELOG.md
-yarn release:major      # 自动升级主版本号、生成 CHANGELOG.md
 
 yarn test               # 运行测试
 

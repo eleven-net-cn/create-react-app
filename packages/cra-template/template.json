@@ -9,10 +9,7 @@
       "build-prod": "env-cmd -e production craco build",
       "commit": "git-cz",
       "test": "craco test",
-      "release": "standard-version",
-      "release:patch": "standard-version --releaseAs patch",
-      "release:minor": "standard-version --releaseAs minor",
-      "release:major": "standard-version --releaseAs major",
+      "changelog": "standard-version -n",
       "eject": "react-scripts eject"
     },
     "devDependencies": {
@@ -46,7 +43,7 @@
       "@commitlint/config-conventional": "9.1.2",
       "lint-staged": "^11.0.0",
       "node-sass": "^5.0.0",
-      "standard-version": "^9.1.1",
+      "standard-version": "^9.3.1",
       "vconsole-webpack-plugin": "^1.5.2",
       "yorkie": "^2.0.0"
     },
