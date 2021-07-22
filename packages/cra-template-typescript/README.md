@@ -20,8 +20,8 @@ yarn create react-app my-app --template @eleven.fe/cra-template-typescript
 
 ## TODO
 
-1. 内置增强的 eslint 扩展
-2. 支持预渲染
+1. 支持预渲染
+2. 预置 preload/prefetch
 
 ## 扩展支持
 
