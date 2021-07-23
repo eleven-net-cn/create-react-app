@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.2...@eleven.fe/cra-template-typescript@1.2.3) (2021-07-23)
+
+### Bug Fixes
+
+- remove template deps ([bd52784](https://github.com/eleven-net-cn/create-react-app/commit/bd5278419cd565b4e4224e7d755c1b03ce630d51))
+
 ## [1.2.2](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.1...@eleven.fe/cra-template-typescript@1.2.2) (2021-07-16)
 
 ### Performance Improvements
