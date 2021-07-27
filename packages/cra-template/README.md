@@ -51,10 +51,15 @@ yarn create react-app my-app --template @eleven.fe/cra-template
   - ✅ 支持 [react css modules](https://github.com/gajus/babel-plugin-react-css-modules)（sass/less/css），☞ 使用指南见下方
   - ✅ 支持 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)（sass/less/css），☞ 使用指南见下方
   - ✅ 内置模块间循环依赖检测
-  - ✅ 内置 [vconsole-webpack-plugin](https://github.com/diamont1001/vconsole-webpack-plugin)，默认在非生产环境开启，在生产环境会被移除，vconsole 代码也不会被打包
+  - ✅ 内置 [vconsole-webpack-plugin](https://github.com/diamont1001/vconsole-webpack-plugin)，默认关闭
+    - `.env-cmdrc.js` 中参数 `ENABLE_VCONSOLE` 控制开关
+    - 生产环境无法开启，即使设置 `ENABLE_VCONSOLE: true` 也无效
+    - 插件式引入，生产环境 `build` 时，vconsole 代码不会被打包
 
 - 开发框架支持
-  - ✅ 内置 AntDesign 配置、按需加载，开箱即用，提供 `package.json/antdTheme` 配置自定义主题
+  - ✅ 内置 AntDesign 配置，开箱即用
+    - 已配置 `babel-plugin-import` 按需加载（无需手动引入 antd 样式代码）
+    - 提供 `package.json/antdTheme` 参数配置自定义主题
 
 ## Q&A
 
