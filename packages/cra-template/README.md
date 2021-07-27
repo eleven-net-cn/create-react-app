@@ -7,11 +7,11 @@
 运行命令，一键生成 React 项目：
 
 ```sh
-npx create-react-app my-app --template @eleven.fe/cra-template
+npx create-react-app [项目名] --template @eleven.fe/cra-template
 
 # or
 
-yarn create react-app my-app --template @eleven.fe/cra-template
+yarn create react-app [项目名] --template @eleven.fe/cra-template
 ```
 
 ![create_react_app.gif](https://static.eleven.net.cn/images/react-app/create_react_app.gif)
