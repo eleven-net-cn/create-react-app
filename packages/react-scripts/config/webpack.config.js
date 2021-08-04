@@ -374,6 +374,13 @@ module.exports = function (webpackEnv) {
       rules: [
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
+        // Handle node_modules packages that contain sourcemaps
+        shouldUseSourceMap && {
+          enforce: 'pre',
+          exclude: /@babel(?:\/|\\{1,2})runtime/,
+          test: /\.(js|mjs|jsx|ts|tsx|css)$/,
+          use: 'source-map-loader',
+        },
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
@@ -518,6 +525,9 @@ module.exports = function (webpackEnv) {
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
+                modules: {
+                  compileType: 'icss',
+                },
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -535,6 +545,7 @@ module.exports = function (webpackEnv) {
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
                 modules: {
+                  compileType: 'module',
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
               }),
@@ -551,6 +562,9 @@ module.exports = function (webpackEnv) {
                   sourceMap: isEnvProduction
                     ? shouldUseSourceMap
                     : isEnvDevelopment,
+                  modules: {
+                    compileType: 'icss',
+                  },
                 },
                 'sass-loader'
               ),
@@ -571,6 +585,7 @@ module.exports = function (webpackEnv) {
                     ? shouldUseSourceMap
                     : isEnvDevelopment,
                   modules: {
+                    compileType: 'module',
                     getLocalIdent: getCSSModuleLocalIdent,
                   },
                 },
@@ -597,7 +612,7 @@ module.exports = function (webpackEnv) {
             // Make sure to add the new loader(s) before the "file" loader.
           ],
         },
-      ],
+      ].filter(Boolean),
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
@@ -650,7 +665,7 @@ module.exports = function (webpackEnv) {
       // This is necessary to emit hot updates (CSS and Fast Refresh):
       isEnvDevelopment && new webpack.HotModuleReplacementPlugin(),
       // Experimental hot reloading for React .
-      // https://github.com/facebook/react/tree/master/packages/react-refresh
+      // https://github.com/facebook/react/tree/main/packages/react-refresh
       isEnvDevelopment &&
         shouldUseReactRefresh &&
         new ReactRefreshWebpackPlugin({

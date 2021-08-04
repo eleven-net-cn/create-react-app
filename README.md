@@ -59,3 +59,19 @@ yarn commit
 # 一键自动发布
 yarn pub
 ```
+
+## 如何保持与 facebook/create-react-app 同步？
+
+与 Facebook 官方保持代码同步，有助于及时引入新特性，站在巨人的肩膀上，我们只加入自己需要的代码。
+
+```zsh
+# 与上游 facebook CRA 仓库建立关联，别名取 upstream
+git remote add upstream https://github.com/facebook/create-react-app.git
+# 拉取更新
+git fetch upstream
+# 合并过来（官方已将主分支更换为 main）
+git merge upstream/main
+
+# 合并以后，多半会有代码冲突，这是正常现象，不要慌...
+# 逐个点开冲突文件，看看冲突位置的代码，选择留下自己的代码还是官方的代码，解决好冲突即可。
+```
