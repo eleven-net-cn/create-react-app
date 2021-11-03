@@ -1,5 +1,4 @@
 {
-  "extends": "./tsconfig.edit.json",
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -14,7 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "src"
   },
   "include": ["src"],
   "exclude": ["src/setupProxy.js"]

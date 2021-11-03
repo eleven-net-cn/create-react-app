@@ -44,7 +44,6 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
 
   - ✅ 引入 [env-cmd](https://www.npmjs.com/package/env-cmd)，可区分任意（编译）环境，优于 dotEnv
   - ✅ 引入 [craco](https://github.com/gsoft-inc/craco)，无需 eject，支持覆盖所有 webpack 配置
-  - ✅ 内置别名 `@`，映射指向 src 目录
   - ✅ 支持本地开发热更新
   - ✅ 支持装饰器
   - ✅ 支持 less
@@ -91,7 +90,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
    - index.jsx 文件
 
      ```jsx
-     // 暂不支持使用 @ 别名导入
+     // 暂不支持使用别名导入
      import './style.scoped.scss';
      import React from 'react';
 
@@ -134,7 +133,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
    - index.jsx 文件
 
      ```jsx
-     // 暂不支持使用 @ 别名导入
+     // 暂不支持使用别名导入
      import './style.module.scss';
      import React from 'react';
 

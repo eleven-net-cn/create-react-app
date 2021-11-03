@@ -39,10 +39,6 @@ yarn eject
 │   │     └── styles/                   # 全局公用样式
 │   │
 │   ├── components/
-│   ├── constants/                  # 公用配置常量
-│   ├── hooks/
-│   ├── pages/
-│   ├── services/                   # API
 │   ├── utils
 │   │     └── env.ts                    # 编译环境相关封装
 │   │
