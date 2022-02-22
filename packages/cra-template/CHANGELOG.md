@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.7](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template@1.2.5...@eleven.fe/cra-template@1.2.7) (2022-02-22)
+
+### Bug Fixes
+
+- 降级 postcss-scss 至 v3.0.0 ([bb58919](https://github.com/eleven-net-cn/create-react-app/commit/bb58919744e955fe116e8932fe85457d2d90f50a))
+
+### Performance Improvements
+
+- 升级 node-sass 相关, 支持 node 新版本及 apple m1 ([f6a773c](https://github.com/eleven-net-cn/create-react-app/commit/f6a773c9b1edd2e5628314c03e57a2416154b857))
+
 ## [1.2.5](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template@1.2.4...@eleven.fe/cra-template@1.2.5) (2021-11-03)
 
 ### Performance Improvements
