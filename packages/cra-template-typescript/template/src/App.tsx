@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Example from '@/components/Example';
+import Example from 'components/Example';
 
 const App: FC = () => {
   return (

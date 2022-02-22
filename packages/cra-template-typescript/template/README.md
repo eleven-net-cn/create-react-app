@@ -39,10 +39,6 @@ yarn eject
 │   │     └── styles/                   # 全局公用样式
 │   │
 │   ├── components/
-│   ├── constants/                  # 公用配置常量
-│   ├── hooks/
-│   ├── pages/
-│   ├── services/                   # API
 │   ├── utils
 │   │     └── env.ts                    # 编译环境相关封装
 │   │
@@ -60,7 +56,6 @@ yarn eject
 ├── craco.config.js             # craco 配置，覆盖 react-scripts & webpack 配置
 ├── package.json
 ├── README.md
-├── tsconfig.edit.json
 ├── tsconfig.json
 └── yarn.lock
 ```

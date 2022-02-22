@@ -39,9 +39,6 @@ yarn eject
 │   │     └── styles/                   # 全局公用样式
 │   │
 │   ├── components/
-│   ├── constants/                  # 公用配置常量
-│   ├── pages/
-│   ├── services/                   # API
 │   ├── utils
 │   │     └── env.js                    # 编译环境相关封装
 │   │
@@ -56,6 +53,7 @@ yarn eject
 ├── .env-cmdrc.js               # node 运行环境配置 & react-scripts 编译配置
 ├── .gitignore
 ├── craco.config.js             # craco 配置，覆盖 react-scripts & webpack 配置
+├── jsconfig.json
 ├── package.json
 ├── README.md
 └── yarn.lock
