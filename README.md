@@ -44,10 +44,10 @@ CRA 是很棒的工具，开发 React 应用你必然有使用过、或正在使
 
 ```zsh
 # ts
-npx create-react-app my-app-ts --template file:./create-react-app/packages/cra-template-typescript
+yarn create react-app my-app-ts --template file:./create-react-app/packages/cra-template-typescript
 
 # es
-npx create-react-app my-app-es --template file:./create-react-app/packages/cra-template
+yarn create react-app my-app-es --template file:./create-react-app/packages/cra-template
 ```
 
 ## CRA Template 发布
