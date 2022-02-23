@@ -3,7 +3,7 @@
  */
 
 // eg：react scoped css（暂不支持使用 @ 别名导入）
-import './style.scoped.scss';
+import './style.scoped.less';
 import React, { FC } from 'react';
 import Code from './Code';
 import LOGO from './logo.svg';

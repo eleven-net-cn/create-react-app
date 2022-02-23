@@ -70,21 +70,21 @@ module.exports = {
       setPublicClassFields: true,
     },
     presets: [
-      [
-        '@babel/preset-env',
-        {
-          modules: false, // 对 ES6 的模块文件不做转化，以便使用 webpack 支持的 tree shaking、sideEffects
-          useBuiltIns: 'entry', // entry ☞ 按需导入，指定的 browserslist 环境，不支持的特性垫片
-          // https://babeljs.io/docs/en/babel-preset-env#usebuiltins
-          // https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md
-          corejs: {
-            version: 3, // 使用 core-js@3
-            proposals: true,
-          },
-          // Exclude transforms that make all code slower
-          exclude: ['transform-typeof-symbol'],
-        },
-      ],
+      // [
+      //   '@babel/preset-env',
+      //   {
+      //     modules: false, // 对 ES6 的模块文件不做转化，以便使用 webpack 支持的 tree shaking、sideEffects
+      //     useBuiltIns: 'entry', // entry ☞ 按需导入，指定的 browserslist 环境，不支持的特性垫片
+      //     // https://babeljs.io/docs/en/babel-preset-env#usebuiltins
+      //     // https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md
+      //     corejs: {
+      //       version: 3, // 使用 core-js@3
+      //       proposals: true,
+      //     },
+      //     // Exclude transforms that make all code slower
+      //     exclude: ['transform-typeof-symbol'],
+      //   },
+      // ],
     ],
     plugins: [
       /**
@@ -99,14 +99,14 @@ module.exports = {
         },
         'antd',
       ],
-      [
-        // @babel/plugin-proposal-decorators 需要在 @babel/plugin-proposal-class-properties 之前，保证装饰器先处理
-        '@babel/plugin-proposal-decorators',
-        {
-          legacy: true, // Use the legacy (stage 1) decorators syntax and behavior.
-        },
-      ],
-      ['@babel/plugin-proposal-class-properties'],
+      // [
+      //   // @babel/plugin-proposal-decorators 需要在 @babel/plugin-proposal-class-properties 之前，保证装饰器先处理
+      //   '@babel/plugin-proposal-decorators',
+      //   {
+      //     legacy: true, // Use the legacy (stage 1) decorators syntax and behavior.
+      //   },
+      // ],
+      // ['@babel/plugin-proposal-class-properties'],
       /**
        * babel-plugin-react-css-modules
        *  - GitHub: https://github.com/gajus/babel-plugin-react-css-modules

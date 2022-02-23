@@ -9,7 +9,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 // 兼容支持到 IE9，如果不需要可删除。
 import 'react-app-polyfill/ie9';
-import './assets/styles/index.scss';
+import './assets/styles/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';

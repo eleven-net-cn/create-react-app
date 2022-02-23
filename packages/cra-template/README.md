@@ -62,7 +62,28 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
 
 ## Q&A
 
-1. 为什么要使用此工具初始化创建项目？直接使用官方 create-react-app 去创建项目不香么？
+1. sass 使用说明
+
+   默认未安装 `node-sass`，原因如下：
+
+   - 在不同的 node 版本环境下，需要的对应 `node-sass` 版本各不相同
+   - `node-sass` 安装速度过于缓慢，在不翻墙的情况下，偶尔会连接失败
+
+   如需使用 sass，根据当前的 node 版本，选择对应的 `node-sass` 版本，安装成功后即可正常使用 sass。
+
+   `node-sass` 版本选择 ☞ [传送门](https://github.com/sass/node-sass#node-version-support-policy)
+
+   你也可以使用 [dart-sass](https://sass-lang.com/dart-sass) 替代 `node-sass`，这是官方推荐的方案。
+
+   但是，如果第三方类库、UI 组件库使用的是 `node-sass` 编译，有可能会遇到一些使用问题（如：样式中的 icon 乱码等）。
+
+   推荐如下：
+
+   - “直接使用 less”
+   - “如果一定要使用 sass，可以自行安装 `node-sass`”
+   - “如果使用 `dart-sass`，请留意是否遇到异常，遇到问题解决问题即可”
+
+2. 为什么要使用此工具初始化创建项目？直接使用官方 create-react-app 去创建项目不香么？
 
    A：这里并没有重复造轮子，而是按照 create-react-app 官方推荐的方式，来自定义企业开发 template，为开发者提供好日常开发必须要用到的各种扩展支持、企业相关的特有扩展、代码规范性的统一约束等等。
 
@@ -70,13 +91,13 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
 
    这里在自定义各项能力的同时，保持与 create-react-app 官方同步，生成的项目可以在任意时刻升级 react-scripts。
 
-2. 编译的产物，怎么移除 js/css 文件名的 hash？
+3. 编译的产物，怎么移除 js/css 文件名的 hash？
 
    > 通常在需要把 html 内嵌在服务端时用到，方便版本号管理。
 
    A：`.env-cmdrc.js` 文件中，提供了参数 `REMOVE_FILENAME_HASH` 来控制。
 
-3. [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css) 怎么使用？
+4. [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css) 怎么使用？
 
    A：以一个 sass 文件为例：
 
@@ -116,7 +137,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
      <div class="example-wrapper" data-v-f821aed7></div>
      ```
 
-4. [react css modules](https://github.com/gajus/babel-plugin-react-css-modules) 怎么使用？
+5. [react css modules](https://github.com/gajus/babel-plugin-react-css-modules) 怎么使用？
 
    > [react css modules](https://github.com/gajus/babel-plugin-react-css-modules) 与通常的 css modules 概念有一些区别，与 create-react-app 默认的 `*.module.css` 使用方式相比更加便捷，推荐通过阅读文档了解更多。
 
@@ -159,7 +180,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
      <div class="example-wrapper-1raFm"></div>
      ```
 
-5. 为什么使用 craco 来自定义 react-scripts 配置？而不是 `eject` 出配置再自定义？
+6. 为什么使用 craco 来自定义 react-scripts 配置？而不是 `eject` 出配置再自定义？
 
    A：大概有以下几点原因：
 
@@ -167,7 +188,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
    2. 保持不 eject，即保持了跟随 React 官方脚步升级 react-scripts 的能力。
    3. craco 能够扩展所有的 react-scripts & webpack 自定义配置，完全不用考虑使用 `eject`。
 
-6. 为什么不选择定制一个 react-scripts 包去扩展配置（还能方便的集成更多额外自定义的编译能力）？
+7. 为什么不选择定制一个 react-scripts 包去扩展配置（还能方便的集成更多额外自定义的编译能力）？
 
    A：我们也可以直接定制一个 react-scripts，将所有需要的扩展纳入定制的包里，要做的工作并不复杂。
 
@@ -177,7 +198,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
 
    而这里选择 craco 方案，项目初始化完成后，将所有的控制权交给你自己，工具出现某些小问题、不足或想要补充，或想要升级 react-scripts 等等，你都可以畅通无阻地自己去完成。
 
-7. 将来想要升级项目的 react-scripts 版本，应该怎么做？
+8. 将来想要升级项目的 react-scripts 版本，应该怎么做？
 
    A：直接安装新版本的 react-scripts，与 create-react-app 官方生成的项目升级套路一致。
 
@@ -191,7 +212,7 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
 
    举个栗子，例如：react-scripts 在 v4 以后默认支持了 fast refresh，而在此之前，我们是自己通过 craco 添加了 fast refresh 的扩展，那么升级 react-scripts 到 v4 以后，直接运行会发现提示 fast refresh 相关的报错，在 `craco.config.js` 中移除该扩展即可。
 
-8. react scoped css / react css modules / styled components 等模块化样式方案，应该选哪个？
+9. react scoped css / react css modules / styled components 等模块化样式方案，应该选哪个？
 
    A：推荐优先使用 [react scoped css](https://github.com/gaoxiaoliangz/react-scoped-css)，简单易用，与 vue 默认提供的 scoped 能力一致。相对于 [react css modules](https://github.com/gajus/babel-plugin-react-css-modules)、[styled components](https://styled-components.com/)，没有繁琐的规则，代码量也更少。
 
@@ -213,6 +234,6 @@ yarn create react-app [项目名] --template @eleven.fe/cra-template
 
    推荐阅读 [[译]停止使用 CSS-in-JS 的九个理由](http://ekoneko.github.io/blog/engineering/stop-using-css-in-js/) 了解更多。
 
-9. 生成的项目目录中，有 `.gitkeep` 文件？
+10. 生成的项目目录中，有 `.gitkeep` 文件？
 
-   A：Git 提交时会略过空目录，`.gitkeep` 文件用于处理此提交问题，编码时将其删除即可。
+    A：Git 提交时会略过空目录，`.gitkeep` 文件用于处理此提交问题，编码时将其删除即可。
