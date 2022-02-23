@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.9](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.8...@eleven.fe/cra-template-typescript@1.2.9) (2022-02-23)
+
+### Performance Improvements
+
+- 默认移除 node-sass ([96fe1a0](https://github.com/eleven-net-cn/create-react-app/commit/96fe1a089db118527b07fdb411978037a141fab3))
+
 ## [1.2.8](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.6...@eleven.fe/cra-template-typescript@1.2.8) (2022-02-22)
 
 ### Bug Fixes
