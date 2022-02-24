@@ -70,6 +70,7 @@
         "@typescript-eslint/no-invalid-this": 0,
         "@typescript-eslint/consistent-type-imports": 0,
         "@typescript-eslint/no-shadow": 0,
+        "@typescript-eslint/no-unused-vars": 1,
         "no-underscore-dangle": 0,
         "import/no-extraneous-dependencies": 0,
         "import/no-dynamic-require": 0,
@@ -94,7 +95,7 @@
     "lint-staged": {
       "**/*.{js,jsx,json,css,scss,less,html,md}": ["prettier --write"],
       "src/**/*.{ts,tsx}": ["prettier --parser=typescript --write"],
-      "src/**/*.{ts,tsx,js,jsx}": ["eslint --fix"]
+      "src/**/*.{ts,tsx,js,jsx}": ["eslint --fix --max-warnings 0"]
     },
     "prettier": {
       "arrowParens": "avoid",
