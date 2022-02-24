@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.10](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.9...@eleven.fe/cra-template-typescript@1.2.10) (2022-02-24)
+
+### Performance Improvements
+
+- git 提交时, 限制 max warnings 0 ([22db0c9](https://github.com/eleven-net-cn/create-react-app/commit/22db0c9ce0f724f42dc3935625429a3ef0c591d0))
+
 ## [1.2.9](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.8...@eleven.fe/cra-template-typescript@1.2.9) (2022-02-23)
 
 ### Performance Improvements
