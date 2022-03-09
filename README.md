@@ -42,6 +42,10 @@ CRA 是很棒的工具，开发 React 应用你必然有使用过、或正在使
 
 ## CRA Template 开发/测试
 
+推荐 vscode 内 `F5` 直接启动调试，`.vscode/launch.json` 内 args 参数直接指定从本地安装。
+
+或者，按如下方式从本地安装。
+
 ```zsh
 # ts
 yarn create react-app my-app-ts --template file:./create-react-app/packages/cra-template-typescript
