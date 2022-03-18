@@ -8,15 +8,11 @@
 
 ```sh
 yarn create react-app [项目名] --template @eleven.fe/cra-template-typescript
-
-# or
-
-npx create-react-app [项目名] --template @eleven.fe/cra-template-typescript
 ```
 
 ![create_react_app_ts.gif](https://static.eleven.net.cn/images/react-app/create_react_app_ts.gif)
 
-> `npx` 和 `yarn create` 二选一即可，两者生成的项目完全一致，都会默认使用 yarn 作为项目的包管理工具。
+> `npx` 方式暂时有问题，推荐 `yarn create`。
 
 ## TODO
 
