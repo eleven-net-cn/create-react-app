@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.11](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template@1.2.10...@eleven.fe/cra-template@1.2.11) (2022-03-18)
+
+### Performance Improvements
+
+- update README ([2d5b649](https://github.com/eleven-net-cn/create-react-app/commit/2d5b6498349de1e38874f31e17fa8df01aa5275b))
+
 ## [1.2.10](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template@1.2.9...@eleven.fe/cra-template@1.2.10) (2022-03-18)
 
 ### Performance Improvements
