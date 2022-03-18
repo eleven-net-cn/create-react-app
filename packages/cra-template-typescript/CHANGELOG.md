@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.11](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.10...@eleven.fe/cra-template-typescript@1.2.11) (2022-03-18)
+
+### Performance Improvements
+
+- add postinstall ([17e40ae](https://github.com/eleven-net-cn/create-react-app/commit/17e40ae5d5a404fbb44d619522f65c4fde82ed95))
+
 ## [1.2.10](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.9...@eleven.fe/cra-template-typescript@1.2.10) (2022-02-24)
 
 ### Performance Improvements
