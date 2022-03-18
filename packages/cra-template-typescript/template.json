@@ -10,7 +10,8 @@
       "commit": "git-cz",
       "test": "craco test",
       "changelog": "standard-version -n",
-      "eject": "react-scripts eject"
+      "eject": "react-scripts eject",
+      "postinstall": "node postinstall.js"
     },
     "devDependencies": {
       "@testing-library/jest-dom": "^5.11.4",
@@ -25,6 +26,7 @@
       "@types/react-css-modules": "^4.6.2",
       "@umijs/fabric": "^2.5.13",
       "env-cmd": "^10.1.0",
+      "fs-extra": "^10.0.1",
       "generic-names": "^3.0.0",
       "http-proxy-middleware": "^1.0.5",
       "@craco/craco": "^6.0.0",

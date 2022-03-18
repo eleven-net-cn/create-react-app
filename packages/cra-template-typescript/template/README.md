@@ -22,9 +22,6 @@ yarn changelog          # （推荐）根据 commit message，自动升级 versi
 yarn test               # 运行测试
 
 # 推荐不要使用 eject，以便能够跟随 React 官方的脚步，随时在你的项目中升级 react-scripts
-# 所有的 react-scripts & webpack 自定义配置，都可以在 craco.config.js 中扩展
-# 如果使用了 eject，你需要自己处理 craco.config.js 中已经添加的各项扩展
-yarn eject
 ```
 
 ## 目录
