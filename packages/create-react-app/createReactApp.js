@@ -200,38 +200,49 @@ function init() {
         return null;
       }
     })
+    // eslint-disable-next-line no-unused-vars
     .then(latest => {
-      if (latest && semver.lt(packageJson.version, latest)) {
-        console.log();
-        console.error(
-          chalk.yellow(
-            `You are running \`create-react-app\` ${packageJson.version}, which is behind the latest release (${latest}).\n\n` +
-              'We no longer support global installation of Create React App.'
-          )
-        );
-        console.log();
-        console.log(
-          'Please remove any global installs with one of the following commands:\n' +
-            '- npm uninstall -g create-react-app\n' +
-            '- yarn global remove create-react-app'
-        );
-        console.log();
-        console.log(
-          'The latest instructions for creating a new app can be found here:\n' +
-            'https://create-react-app.dev/docs/getting-started/'
-        );
-        console.log();
-        process.exit(1);
-      } else {
-        createApp(
-          projectName,
-          program.verbose,
-          program.scriptsVersion,
-          program.template,
-          program.useNpm,
-          program.usePnp
-        );
-      }
+      // 暂时略过不做 cra 版本检测，等待升级 v5 以后放开
+      createApp(
+        projectName,
+        program.verbose,
+        program.scriptsVersion,
+        program.template,
+        program.useNpm,
+        program.usePnp
+      );
+
+      //   if (latest && semver.lt(packageJson.version, latest)) {
+      //     console.log();
+      //     console.error(
+      //       chalk.yellow(
+      //         `You are running \`create-react-app\` ${packageJson.version}, which is behind the latest release (${latest}).\n\n` +
+      //           'We no longer support global installation of Create React App.'
+      //       )
+      //     );
+      //     console.log();
+      //     console.log(
+      //       'Please remove any global installs with one of the following commands:\n' +
+      //         '- npm uninstall -g create-react-app\n' +
+      //         '- yarn global remove create-react-app'
+      //     );
+      //     console.log();
+      //     console.log(
+      //       'The latest instructions for creating a new app can be found here:\n' +
+      //         'https://create-react-app.dev/docs/getting-started/'
+      //     );
+      //     console.log();
+      //     process.exit(1);
+      //   } else {
+      //     createApp(
+      //       projectName,
+      //       program.verbose,
+      //       program.scriptsVersion,
+      //       program.template,
+      //       program.useNpm,
+      //       program.usePnp
+      //     );
+      //   }
     });
 }
 
