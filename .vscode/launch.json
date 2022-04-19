@@ -18,6 +18,8 @@
         // 2.模板指定本地
         "--template",
         "file:./packages/cra-template-typescript"
+        // es tpl
+        // "file:./packages/cra-template"
 
         // 3.scripts 包指定本地
         // "--scripts-version",
