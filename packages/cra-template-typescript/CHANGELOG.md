@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.15](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.14...@eleven.fe/cra-template-typescript@1.2.15) (2022-04-19)
+
+### Performance Improvements
+
+- update reset.css path ([946ebc6](https://github.com/eleven-net-cn/create-react-app/commit/946ebc6054b53e1b298da66d1bd8a1c7ec1744f0))
+
 ## [1.2.14](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template-typescript@1.2.13...@eleven.fe/cra-template-typescript@1.2.14) (2022-04-12)
 
 ### Performance Improvements
