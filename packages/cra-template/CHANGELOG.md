@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.15](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template@1.2.14...@eleven.fe/cra-template@1.2.15) (2022-04-20)
+
+### Performance Improvements
+
+- 优化 polyfill 注释 ([47f888e](https://github.com/eleven-net-cn/create-react-app/commit/47f888e883c054d21abbafb5221152e2324f2a6a))
+
 ## [1.2.14](https://github.com/eleven-net-cn/create-react-app/compare/@eleven.fe/cra-template@1.2.13...@eleven.fe/cra-template@1.2.14) (2022-04-19)
 
 ### Performance Improvements
