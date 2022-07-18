@@ -1,5 +1,11 @@
 # @eleven.fe/cra-template-typescript
 
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+
+[npm-url]: https://npmjs.org/package/@eleven.fe/cra-template-typescript
+[downloads-image]: https://img.shields.io/npm/dt/@eleven.fe/cra-template-typescript.svg
+[npm-image]: https://img.shields.io/npm/v/@eleven.fe/cra-template-typescript.svg
+
 开箱即用的 CRA 定制方案，解锁无 `eject` 使用 create-react-app 的便捷方法，自由扩展任意配置，可持续升级 react-scripts。
 
 ## 立即使用
